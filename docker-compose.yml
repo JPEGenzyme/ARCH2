@@ -1,13 +1,13 @@
 version: '3.8'
 services:
-  # soap:
-  #   build: ./SOAPServices
-  #   ports:
-  #     - "8001:80"
-  # rest:
-  #   build: ./RESTApi
-  #   ports:
-  #     - "8002:80"
+  soap:
+    build: ./SOAPServices
+    ports:
+      - "8001:80"
+  rest:
+    build: ./RESTApi
+    ports:
+      - "8002:80"
   grpc:
     build: ./Grpc
     ports:
