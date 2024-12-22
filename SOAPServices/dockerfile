@@ -1,0 +1,24 @@
+# Use .NET SDK image for building the application
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+
+# Set the working directory
+WORKDIR /src
+
+# Copy the SOAPServices.csproj file and restore dependencies
+COPY SOAPServices.csproj ./
+RUN dotnet restore
+
+# Copy the rest of the code
+COPY . ./
+
+# Build and publish the application
+RUN dotnet publish -c Release -o /app
+
+# Set up runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 80
+
+COPY --from=build /app/publish .
+# Set the entrypoint to the application
+ENTRYPOINT ["dotnet", "SOAPServices.dll"]

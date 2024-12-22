@@ -1,0 +1,11 @@
+@RESTApi_HostAddress = http://localhost:5276
+
+GET {{RESTApi_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{RESTApi_HostAddress}}/todos/1
+Accept: application/json
+
+###
