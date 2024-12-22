@@ -3,19 +3,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'dotnet build ./SOAPServices/SOAPServices.sln'
-                sh 'dotnet build ./RESTApi/RESTApi.sln'
-                sh 'dotnet build ./Grpc/Grpc.sln'
+                bat 'dotnet build ./SOAPServices/SOAPServices.sln'
+                bat 'dotnet build ./RESTApi/RESTApi.sln'
+                bat 'dotnet build ./Grpc/Grpc.sln'
             }
         }
         stage('Docker Build') {
             steps {
-                sh 'docker-compose build'
+                bat 'docker-compose build'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'docker-compose up -d'
+                bat 'docker-compose up -d'
             }
         }
     }
