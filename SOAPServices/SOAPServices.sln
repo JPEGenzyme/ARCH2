@@ -5,10 +5,6 @@ VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAPServices", "SOAPServices\SOAPServices.csproj", "{604D365E-58FA-45BC-9747-3FF5307E5067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTApi", "..\RESTApi\RESTApi\RESTApi.csproj", "{4209A780-D0C3-41AC-BCF7-1C1AFA03A55F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grpc", "..\Grpc\Grpc\Grpc.csproj", "{E78420DE-408B-4AB8-A8C0-CA36152EDEA8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
